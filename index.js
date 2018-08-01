@@ -26,7 +26,7 @@ server.post('/',function (request,response)  {
             socket.disconnect();
         });
         
-        socket.emit('add user', 'Assistant'); //login as "alexa"
+        socket.emit('add user', 'alexa'); //login as "alexa"
     });
     //end - socket io
     if(request.body.queryResult.intent.displayName == 'Welcome') {
