@@ -26,10 +26,22 @@ server.post('/',function (request,response)  {
             socket.disconnect();
         });
         
-        socket.emit('add user', 'alexa'); //login as "alexa"
+        socket.emit('add user', 'Assistant'); //login as "alexa"
     });
     //end - socket io
-    if(request.body.queryResult.intent.displayName == 'Welcome') {
+    if(request.body.queryResult.intent.displayName == 'Default Welcome Intent') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Please tell me how can I be of service.",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'Welcome') {
 
         //start - response to google assistant
 
@@ -53,6 +65,66 @@ server.post('/',function (request,response)  {
             }
         )); 
     }
+    else if(request.body.queryResult.intent.displayName == 'Bookticket') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Your ticket has been booked. Thank You.",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'FlightBook') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Sure, can you tell me your one I D please?",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'CityNext') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Amy, there are 12 available options for you.  The best flight selected for you takes 26 hours with a 6 hour layover at Dubai.",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'CityOne') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Bengaluru selected.  Tell me the next city",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'DateIntent') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Is it a one way journey, a round trip or a break journey?",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
     else if(request.body.queryResult.intent.displayName == 'Security') {
         
         //start - response to google assistant
@@ -60,6 +132,54 @@ server.post('/',function (request,response)  {
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
                 "fulfillmentText": "Your security check is complete. We invite you to enjoy the world of million experiences at our airport.",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'oneID') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "This id will be used for all the booking procedures. So tell me, When do you want to travel?",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'Roam') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Amy, Dubai now  provides free transit visa for maximum of 48 hours. According to your one ID you are eligible for the transit visa.",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'TravelType') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Do you want to book the flight from your current location which is Bengaluru?",
+                "fulfillmentMessages": [
+                ]
+            }
+        )); 
+    }
+    else if(request.body.queryResult.intent.displayName == 'Itinery') {
+
+        //start - response to google assistant
+
+        response.setHeader('Content-Type', 'application/json');
+        response.send(JSON.stringify({
+                "fulfillmentText": "Sure all the relevant flight details are mapped on your A R experience studio",
                 "fulfillmentMessages": [
                 ]
             }
