@@ -26,7 +26,7 @@ server.post('/',function (request,response)  {
             socket.disconnect();
         });
         
-        socket.emit('add user', 'Assistant'); //login as "alexa"
+        socket.emit('add user', 'alexa'); //login as "alexa"
     });
     //end - socket io
     if(request.body.queryResult.intent.displayName == 'Default Welcome Intent') {
@@ -179,7 +179,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "Sure all the relevant flight details are mapped on your A R experience studio",
+                "fulfillmentText": "Sure all the relevant flight details are mapped on your A R experience studio. Your ticket cost is five thousand nine hundred and thirty eight dollars.",
                 "fulfillmentMessages": [
                 ]
             }
