@@ -19,7 +19,8 @@ server.post('/',function (request,response)  {
                     
         socket.on('login', function(data){
             console.log('login');
-            socket.emit('new message', (request.body.queryResult.intent.displayName).toLowerCase()); //sends message to chat server
+            socket.emit('new message', (request.body.queryResult.queryText).toLowerCase());
+            //socket.emit('new message', (request.body.queryResult.intent.displayName).toLowerCase()); //sends message to chat server
         });
         
         socket.on('got message', function() {
@@ -143,7 +144,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "This id will be used for all the booking procedures. So tell me, When do you want to travel?",
+                "fulfillmentText": "This I D will be used for all the booking procedures. So tell me, When do you want to travel?",
                 "fulfillmentMessages": [
                 ]
             }
