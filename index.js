@@ -47,7 +47,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "Welcome Frank to the airport today. Your flight number DU348 to Paris is on time and will depart from gate 3A in 90 minutes ",
+                "fulfillmentText": "Welcome Amy to the airport today. Your flight number DU348 to Paris is on time and will depart from gate 3A in 90 minutes ",
                 "fulfillmentMessages": [
                 ]
             }
@@ -191,7 +191,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "Hello Frank - we have great offers running for you today. You may like to buy the perfume from \"Chanel\" to gift your wife on your upcoming 15th marriage anniversary",
+                "fulfillmentText": "Hello Amy - we have great offers running for you today. You may like to buy the perfume from \"Chanel\" to gift your wife on your upcoming 15th marriage anniversary",
                 "fulfillmentMessages": [
                 ]
             }
@@ -203,7 +203,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "Thank you Frank for shopping with us today. The same will be delivered to your seat # 12A",
+                "fulfillmentText": "Thank you Amy for shopping with us today. The same will be delivered to your seat # 12A",
                 "fulfillmentMessages": [
                 ]
             }
@@ -227,7 +227,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "Frank, the boarding for your flight DU348 has started and the gate will close in 20 mins. I suggest you start walking to the boarding gate 3A that is 10 minutes walking distance",
+                "fulfillmentText": "Amy, the boarding for your flight DU348 has started and the gate will close in 20 mins. I suggest you start walking to the boarding gate 3A that is 10 minutes walking distance",
                 "fulfillmentMessages": [
                 ]
             }
@@ -239,7 +239,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "Thank you Frank for visiting us. Hope you have a pleasant journey!",
+                "fulfillmentText": "Thank you Amy for visiting us. Hope you have a pleasant journey!",
                 "fulfillmentMessages": [
                 ]
             }
@@ -263,7 +263,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "Bun added.",
+                "fulfillmentText": "Bread added.",
                 "fulfillmentMessages": [
                 ]
             }
