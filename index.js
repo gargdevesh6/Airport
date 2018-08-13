@@ -19,8 +19,7 @@ server.post('/',function (request,response)  {
                     
         socket.on('login', function(data){
             console.log('login');
-            socket.emit('new message', (request.body.queryResult.queryText).toLowerCase());
-            //socket.emit('new message', (request.body.queryResult.intent.displayName).toLowerCase()); //sends message to chat server
+            socket.emit('new message', (request.body.queryResult.intent.displayName).toLowerCase()); //sends message to chat server
         });
         
         socket.on('got message', function() {
@@ -36,7 +35,7 @@ server.post('/',function (request,response)  {
 
         response.setHeader('Content-Type', 'application/json');
         response.send(JSON.stringify({
-                "fulfillmentText": "My one I D is  A  E eight nine eight nine",
+                "fulfillmentText": "Please tell me how can I be of service.",
                 "fulfillmentMessages": [
                 ]
             }
